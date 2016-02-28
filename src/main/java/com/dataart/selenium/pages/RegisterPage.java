@@ -39,7 +39,7 @@ public class RegisterPage extends BasePage {
         lastNameTextField.sendKeys(newuser.getLname());
         passwordTextField.sendKeys(newuser.getPassword());
         confirmPasswordTextField.sendKeys(newuser.getPassword());
-        return(HeaderPage.);
+//        return(HeaderPage.);
 //        roleDropDown.selectByValue(newuser.getRole());
     }
 
