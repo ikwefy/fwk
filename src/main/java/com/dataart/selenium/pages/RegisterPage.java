@@ -6,9 +6,9 @@ package com.dataart.selenium.pages;
 
 import com.dataart.selenium.framework.BasePage;
 import com.dataart.selenium.models.User;
-import org.apache.bcel.generic.Select;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 public class RegisterPage extends BasePage {
 
@@ -23,7 +23,7 @@ public class RegisterPage extends BasePage {
     @FindBy(xpath = RCONFIRMPASSWORD_TEXT_FIELD_XPATH)
     WebElement confirmPasswordTextField;
     @FindBy(xpath = RROLE_SELECT_XPATH)
-    org.openqa.selenium.support.ui.Select roleDropDown;
+    Select roleDropDown;
     @FindBy(xpath = REGISTER_BUTTON_XPATH)
     WebElement registerButton;
 
@@ -40,7 +40,8 @@ public class RegisterPage extends BasePage {
         passwordTextField.sendKeys(newuser.getPassword());
         confirmPasswordTextField.sendKeys(newuser.getPassword());
 //        return initPage(HomePage.class);
-//        roleDropDown.selectByValue(newuser.getRole());
+        roleDropDown.selectByValue(newuser.getRole());
+//        registerButton.click();
     }
 
     public static final String RNAME_TEXT_FIELD_XPATH = "//div[1]/form/table/tbody/tr[1]/td[2]/input";
