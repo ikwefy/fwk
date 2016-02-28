@@ -29,6 +29,11 @@ public class RegistrationTest extends BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     public void openRegisterPage() {
+        basicPage = initPage(BasicPage.class);
+        headerPage = initPage(HeaderPage.class);
+        registerPage = initPage(RegisterPage.class);
+        headerPage = initPage(HeaderPage.class);
+        user = admin();
         driver.findElement(By.xpath("html/body/div[1]/a")).click();
         user = newuser();
     }
